@@ -33,7 +33,7 @@ end
 config :my_app, MyApp.GRPCClient,
   size: 2,                                  
   max_overflow: 10,
-  url: "localhost:50051,
+  url: "localhost:50051",
   connect_opts: []
 ```
 
