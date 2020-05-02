@@ -68,9 +68,9 @@ The available configuration parameters are:
 
 ## TODO
 
-- [] Better naming logic for poolboy's pool
-- [] Tests
-- [] Configurable checkout timeout
-- [] Better way of getting channel
-- [] Handle connection errors
-- [] Module docs
+- [ ] Better naming logic for poolboy's pool
+- [ ] Tests
+- [ ] Configurable checkout timeout
+- [ ] Better way of getting channel
+- [ ] Handle connection errors
+- [ ] Module docs
