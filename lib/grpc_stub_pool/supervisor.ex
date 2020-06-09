@@ -2,7 +2,7 @@ defmodule GRPCClientPool.Supervisor do
   @moduledoc false
   use Supervisor
 
-  @defaults [size: 2, max_overflow: 10, connect_opts: []]
+  @defaults [size: 2, max_overflow: 10, connect_opts: [], reconnect_interval: 5_000]
 
   @doc """
   Retrieves the compile time configuration.
@@ -69,6 +69,6 @@ defmodule GRPCClientPool.Supervisor do
       :poolboy.child_spec(client_pool, poolboy_config, [config])
     ]
 
-    Supervisor.init(children, strategy: :one_for_one, max_restarts: 0)
+    Supervisor.init(children, strategy: :one_for_one, max_restarts: 10, max_seconds: 1)
   end
 end

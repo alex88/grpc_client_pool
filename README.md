@@ -59,12 +59,13 @@ end
 
 The available configuration parameters are:
 
-| Name         | Default | Required | Description                                                                                                                                                                     |
-|--------------|---------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| size         | 2       | false    | Poolboy size parameter                                                                                                                                                          |
-| max_overflow | 10      | false    | Poolboy max_overflow parameter                                                                                                                                                  |
-| url          | nil     | true     | The url to be used as first argument of `GRPC.Stub.connect/2`. Can be either a string or {:system, "ENV"} or {:system, "ENV", "default"} to load the value from an env variable |
-| connect_opts | []      | false    | The second argument passed to `GRPC.Stub.connect/2`                                                                                                                             |
+|    Name             |  Default  |  Required  |  Description                                                                                                                                                                      |
+|---------------------|-----------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| size                |  2        |  false     |  Poolboy size parameter                                                                                                                                                           |
+| max_overflow        |  10       |  false     |  Poolboy max_overflow parameter                                                                                                                                                   |
+| url                 |  nil      |  true      |  The url to be used as first argument of `GRPC.Stub.connect/2`. Can be either a string or {:system, "ENV"} or {:system, "ENV", "default"} to load the value from an env variable  |
+| connect_opts        |  []       |  false     |  The second argument passed to `GRPC.Stub.connect/2`                                                                                                                              |
+| reconnect_interval  |  5000     |  false     |  If the initial connection doesn't succeed, retry after `reconnect_interval` ms                                                                                                   |
 
 ## TODO
 
@@ -72,5 +73,5 @@ The available configuration parameters are:
 - [ ] Tests
 - [ ] Configurable checkout timeout
 - [ ] Better way of getting channel
-- [ ] Handle connection errors
+- [x] Handle connection errors
 - [ ] Module docs
