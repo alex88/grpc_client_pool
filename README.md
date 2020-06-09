@@ -11,7 +11,7 @@ The package can be installed with:
 ```elixir
 def deps do
   [
-    {:grpc_client_pool, "~> 0.0.1-beta"}
+    {:grpc_client_pool, "~> 0.0.2-beta"}
   ]
 end
 ```
